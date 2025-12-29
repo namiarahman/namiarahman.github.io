@@ -16,7 +16,7 @@
         }
 
         .container {
-            max-width: 1100px; 
+            max-width: 1200px; /* Slightly wider to fit 3 images better */
             margin: auto;
             padding: 20px;
         }
@@ -45,12 +45,12 @@
             margin-bottom: 20px;
         }
 
-        /* PROJECTS GRID */
+        /* PROJECT GRID - 3 per row */
         .project-row {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
-            margin-top: 10px;
+            margin-bottom: 40px;
         }
 
         .project-card {
@@ -64,33 +64,34 @@
             justify-content: space-between;
         }
 
-        /* ART GRID - FIXED */
+        /* ART GRID - FORCED 3 PER ROW */
         .art-row {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Larger items for art */
-            gap: 30px;
-            margin-top: 10px;
+            grid-template-columns: repeat(3, 1fr); /* FORCES 3 COLUMNS */
+            gap: 25px;
         }
 
         .art-card {
             background: white;
-            padding: 15px;
-            border-radius: 15px;
+            padding: 12px;
+            border-radius: 12px;
             border: 1px solid #eee;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            display: flex;
+            flex-direction: column;
         }
 
         .art-card img {
             width: 100%;
-            aspect-ratio: 4 / 3; /* This forces all images to the same rectangular shape */
-            object-fit: cover;   /* This ensures images don't stretch */
-            border-radius: 10px;
+            aspect-ratio: 1 / 1; /* Square ratio makes the grid look very neat */
+            object-fit: cover;
+            border-radius: 8px;
             display: block;
         }
 
         .art-card p {
             margin-top: 15px;
-            font-size: 14px;
+            font-size: 0.9rem;
+            flex-grow: 1; /* Ensures text takes up space equally */
         }
 
         .subtitle {
@@ -114,9 +115,14 @@
             color: #999;
         }
 
-        /* Responsive Mobile Tweak */
+        /* TABLET/MOBILE STYLES */
+        @media (max-width: 900px) {
+            .art-row { grid-template-columns: repeat(2, 1fr); } /* 2 per row on tablets */
+        }
+
         @media (max-width: 600px) {
-            .art-row { grid-template-columns: 1fr; }
+            .art-row { grid-template-columns: 1fr; } /* 1 per row on phones */
+            h1 { font-size: 32px; }
         }
     </style>
 </head>
@@ -163,18 +169,41 @@
         <h2>My Creative Corner</h2>
         <div class="art-row">
             <div class="art-card">
-                <img src="The Crimson Return.jpg">
-                <p><strong>"The Crimson Return"</strong><br>An abstract meditation on the 'hour of return,' using saturated crimson skies to capture the communal peace of fishermen.</p>
+                <img src="The Crimson Return.jpg" alt="Crimson Return">
+                <p><strong>"The Crimson Return"</strong><br>An abstract meditation using saturated crimson skies to capture the peace of fishermen.</p>
             </div>
-            
             <div class="art-card">
-                <img src="VibrantNights.jpeg">
-                <p><strong>"Vibrant Nights"</strong><br>A vibrant subversion of 'Starry Night' that reimagines the night as a cheerful, lawless space bursting with color.</p>
+                <img src="VibrantNights.jpeg" alt="Vibrant Nights">
+                <p><strong>"Vibrant Nights"</strong><br>A subversion of 'Starry Night' reimagining the night as a cheerful, lawless space bursting with color.</p>
             </div>
+            <div class="art-card">
+                <img src="The Golden Vessel.jpeg" alt="Golden Vessel">
+                <p><strong>"The Golden Vessel"</strong><br>A meditation on Tagore’s 'Shonar Tori,' using moody teals to capture the moment creation is carried away.</p>
+            </div>
+            <div class="art-card">
+                <img src="Quiet Alchemy.jpeg" alt="Quiet Alchemy">
+                <p><strong>"The Quiet Alchemy"</strong><br>A tribute to childhood blackouts, using indigo swirls to capture how a candle flame transformed the dark.</p>
+            </div>
+            <div class="art-card">
+                <img src="The Reach.jpeg" alt="The Reach">
+                <p><strong>"The Reach"</strong><br>A visual meditation on the spirit of the voyager, using palette knife textures to capture a bold ascent.</p>
+            </div>
+            <div class="art-card">
+                <img src="Rickshawchitro.jpg" alt="Rickshawchitro">
+                <p><strong>"Rickshawchitro"</strong><br>A celebration of Bangladeshi rickshaw art, using kaleidoscopic motifs to capture traditional street craft.</p>
+            </div>
+        </div>
+    </section>
 
-            <div class="art-card">
-                <img src="The Golden Vessel.jpeg">
-                <p><strong>"The Golden Vessel"</strong><br>A visual meditation on Tagore’s 'Shonar Tori,' using moody teals to capture the moment creation is carried away.</p>
-            </div>
+    <footer>
+        <p>
+            <a href="https://github.com/namiarahman">GitHub</a> | 
+            <a href="https://www.linkedin.com/in/namia-rahman-1057a6270/">LinkedIn</a> | 
+            <a href="mailto:namiarahman@gmail.com">Email</a>
+        </p>
+        © 2025 Namia Rahman
+    </footer>
+</div>
 
-            <div class="art-card">
+</body>
+</html>
