@@ -3,168 +3,242 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Namia Rahman</title>
+    <title>Namia Rahman | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --bg: #fdfaf7;
+            --header-bg: #f3f0ec;
+            --accent: #0288d1;
+            --text: #333;
+            --card-white: #ffffff;
+        }
+
         body {
             margin: 0;
-            font-family: 'Fira Sans', sans-serif;
-            background: #e0f7fa; 
-            color: #333;
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
         }
+
+        /* --- HERO SECTION --- */
         header {
-            padding: 60px 20px;
+            padding: 100px 20px;
             text-align: center;
-            background: #b3e5fc; 
-            position: relative;
+            background: var(--header-bg);
+            border-bottom: 1px solid #eee;
         }
-        .resume-btn {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: #0288d1; 
-            color: white;
-            border: none;
-            padding: 10px 18px;
-            border-radius: 8px;
-            cursor: pointer;
-        }
+
         h1 {
-            font-size: 42px;
-            color: #0277bd; 
-            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            margin: 0;
+            color: #1a1a1a;
         }
-        p.subtitle {
-            font-size: 18px;
-            color: #01579b; 
+
+        .subtitle {
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #666;
+            margin-top: 10px;
         }
-        
+
+        .edu-tag {
+            margin-top: 20px;
+            font-style: italic;
+            color: var(--accent);
+        }
+
+        /* --- LAYOUT --- */
         section {
-            padding: 50px 20px;
-            max-width: 900px;
+            padding: 80px 20px;
+            max-width: 1000px;
             margin: auto;
         }
-        .card {
-            background: #ffffffcc;
-            padding: 25px;
-            margin-bottom: 25px;
-            border-radius: 18px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-            border: 1px solid #b3e5fc;
-        }
+
         h2 {
-            color: #0288d1;
-            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
         }
-        .exp-title {
-            font-weight: bold;
-            color: #01579b;
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: var(--accent);
+            margin: 10px auto;
         }
-        
-        a {
-            color: #0288d1;
+
+        /* --- PROJECT CARDS --- */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: var(--card-white);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            border: 1px solid #f0f0f0;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .lesson-box {
+            background: #f0f7ff;
+            padding: 15px;
+            border-left: 4px solid var(--accent);
+            margin: 15px 0;
+            font-size: 0.95rem;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: var(--accent);
+            color: white;
             text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
         }
-        a:hover {
-            text-decoration: underline;
+
+        /* --- ART GALLERY --- */
+        .art-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
         }
+
+        .art-item {
+            background: var(--card-white);
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .art-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            background: #eee; /* Placeholder color */
+        }
+
+        .art-caption {
+            margin-top: 12px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        /* --- SOCIALS --- */
+        .social-links {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .social-links a {
+            margin: 0 15px;
+            font-weight: bold;
+            text-decoration: none;
+            color: var(--text);
+            border-bottom: 2px solid var(--accent);
+        }
+
         footer {
             text-align: center;
-            padding: 30px;
-            font-size: 14px;
-            color: #01579b;
-        }
-        .space {
-            height: 20px;
+            padding: 50px;
+            background: #f3f0ec;
+            color: #888;
         }
     </style>
 </head>
 <body>
+
     <header>
         <h1>Namia Rahman</h1>
-        <p class="subtitle">Tech Enthusiast • Student • Athlete • Artist</p>
-       
-       <a class="resume-btn" href="Resume of Namia Rahman2.pdf" target="_blank">View Resume</a>
-
+        <p class="subtitle">Developer • Artist • 1st Dan Black Belt</p>
+        <p class="edu-tag">Viqarunnisa Noon School and College (Class of 2024)</p>
     </header>
 
     <section>
-        <h2 style="text-align: center;">My story so far</h2>
-        <div class="space"></div>
-        <div class="space"></div>
-        <h2>Education</h2>
-        <div class="card">
-            <p class="exp-title">Higher Secondary Certificate (HSC)</p>
-            <p><strong>Institute:</strong> Viqarunnisa Noon School and College</p>
-            <p><strong>Group:</strong> Science</p>
-            <p><strong>Board:</strong> Dhaka</p>
-            <p><strong>Session:</strong> 2022–2024</p>
-            <p><strong>GPA:</strong> 4.58 / 5</p>
-            <div class="space"></div>
-            <p class="exp-title">Secondary School Certificate (SSC)</p>
-            <p><strong>Institute:</strong> Viqarunnisa Noon School and College</p>
-            <p><strong>Group:</strong> Science</p>
-            <p><strong>Board:</strong> Dhaka</p>
-            <p><strong>Session:</strong> 2020–2022</p>
-            <p><strong>GPA:</strong> 5 / 5</p>
-        </div>
+        <h2>The Learning Log</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Bookstore System (Python)</h3>
+                <p>A client-server CRUD system for managing book data.</p>
+                <div class="lesson-box">
+                    <strong>💡 What I learned:</strong> 
+                    Mastered file handling and how to structure a basic API logic using text-based storage.
+                </div>
+                <a href="https://github.com/namiarahman/BookStore-Management-System-API-Python-" class="btn" target="_blank">View Code</a>
+            </div>
 
-        <h2>Experience</h2>
-        <div class="card">
-            <p class="exp-title">Student Partner — ApplyStart.com</p>
-            <p>Conducted marketing research improving engagement rates by 5% and redirecting 100+ prospects. Managed on-site and digital promotion, boosting inquiries and outreach.</p>
-            <p><strong>Timeline:</strong> Apr 2024 – Present</p>
-            <div class="space"></div>
-            <p class="exp-title">Vice President — Viqarunnisa Noon English Language Club</p>
-            <p>Supervised junior executives, organized events, interviewed applicants, and contributed to onboarding 100+ members.</p>
-            <p><strong>Timeline:</strong> Jan 2023 – Dec 2024</p>
-            <div class="space"></div>
-            <p class="exp-title">Volunteer — Bangladesh Youth Leadership Center (BYLC)</p>
-            <p>Provided online and in-person support, maintained 1,000+ alumni records, and coordinated logistics for youth employment initiatives.</p>
-            <p><strong>Timeline:</strong> Jul 2022 – Jun 2023</p>
-            <div class="space"></div>
-            <p class="exp-title">Co-Organizer — Nibedita</p>
-            <p>Led the tech team and coordinated logistics for a two-day female entrepreneurship event with over 2,000 attendees.</p>
-            <p><strong>Timeline:</strong> Oct 2022</p>
-        </div>
+            <div class="project-card">
+                <h3>Java Swing Inventory</h3>
+                <p>A billing and inventory system with a full Graphical User Interface.</p>
+                <div class="lesson-box">
+                    <strong>💡 What I learned:</strong> 
+                    Explored the complexity of GUI design and event listeners—making code visual was a game changer!
+                </div>
+                <a href="https://github.com/namiarahman/BookStore-Management-System-GUI-Java" class="btn" target="_blank">View Code</a>
+            </div>
 
-        <h2>Achievements</h2>
-        <div class="card">
-            <p class="exp-title">Sport</p>
-            <p>1st Dan Black Belt Diploma — Bangladesh Karate Federation.</p>
-             <div class="space"></div>
-            <p class="exp-title">Artist</p>
-            <p> Created and sold over 30 paintings through networking and client referrals.</p>
+            <div class="project-card">
+                <h3>Cryptography Program</h3>
+                <p>A C++ tool to encode and decode messages using a 4-digit key.</p>
+                <div class="lesson-box">
+                    <strong>💡 What I learned:</strong> 
+                    Dove deep into logic and algorithms. It taught me how data can be transformed and protected.
+                </div>
+                <a href="https://github.com/namiarahman/Cryptography" class="btn" target="_blank">View Code</a>
+            </div>
         </div>
+    </section>
 
-        <h2>Projects</h2>
-        <div class="card">
-            <p class="exp-title">Bookstore Management System — Python</p>
-            <p>Developed a Python client–server CRUD system storing customer and book data in text files, with a console client for interaction.
-            You can find it <a href="https://github.com/namiarahman/BookStore-Management-System-API-Python-" target="_blank">here</a>.
-            </p>
-            <div class="space"></div>
-            <p class="exp-title">Bookstore Management System — Java Swing</p>
-            <p>Built an inventory management and customer billing system using Java Swing with structured GUI components.
-            You can find it <a href="https://github.com/namiarahman/BookStore-Management-System-GUI-Java" target="_blank">here</a>.
-            </p>
-            <div class="space"></div>
-            <p class="exp-title">Cryptography Program - C++</p>
-            <p>A simple program to encode or decode a message using a 4 digit key.
-            You can find it <a href="https://github.com/namiarahman/Cryptography" target="_blank">here</a>.
-            </p>
-            
+    <section style="background: #fdfaf7;">
+        <h2>My Creative Corner</h2>
+        <p style="text-align:center; margin-top: -30px; margin-bottom: 40px;">I've sold over 30 paintings to clients. Here are a few favorites:</p>
+        <div class="art-grid">
+            <div class="art-item">
+                <img src="art1.jpg" alt="Art Piece 1"> <div class="art-caption">
+                    <strong>Title of Piece</strong><br>
+                    An exploration of textures and color that I completed in early 2024.
+                </div>
+            </div>
+            <div class="art-item">
+                <img src="art2.jpg" alt="Art Piece 2"> <div class="art-caption">
+                    <strong>Abstract Study</strong><br>
+                    Commissioned work where I focused on blending cool tones.
+                </div>
+            </div>
         </div>
+    </section>
 
-        <h2>Find me on</h2>
-        <div class="card">
-            <p><a href="https://github.com/namiarahman" target="_blank"><strong>GitHub</strong></a></p>
-            <p> <a href="https://www.linkedin.com/in/namia-rahman-1057a6270/" target="_blank"><strong>LinkedIn</strong></a></p>
-            <p><a><strong>namiarahman@gmail.com</strong></a></p>
+    <section>
+        <h2>Let's Connect</h2>
+        <div class="social-links">
+            <a href="https://github.com/namiarahman" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/namia-rahman-1057a6270/" target="_blank">LinkedIn</a>
+            <a href="mailto:namiarahman@gmail.com">Email</a>
+            <a href="Resume of Namia Rahman2.pdf" target="_blank">Resume</a>
         </div>
     </section>
 
     <footer>
-        © 2025 Namia Rahman
+        © 2025 Namia Rahman • Created with code and coffee.
     </footer>
+
 </body>
 </html>
