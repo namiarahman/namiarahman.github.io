@@ -16,7 +16,7 @@
         }
 
         .container {
-            max-width: 1100px; /* Widened to fit 3 cards comfortably */
+            max-width: 1100px; 
             margin: auto;
             padding: 20px;
         }
@@ -44,9 +44,7 @@
             display: inline-block;
         }
 
-        /* --- THE GRID SYSTEM --- */
         
-        /* This handles the 3 Projects side-by-side */
         .project-row {
             display: flex;
             flex-wrap: wrap;
@@ -82,14 +80,6 @@
             border-radius: 12px;
         }
 
-        /* ELEMENTS INSIDE CARDS */
-        .learning-box {
-            background-color: #f0f7ff;
-            padding: 12px;
-            border-left: 4px solid #0288d1;
-            margin: 15px 0;
-            font-size: 14px;
-        }
 
         .subtitle {
             font-size: 16px;
@@ -122,64 +112,80 @@
 <body>
 
 <header>
-    <h1>Namia Rahman</h1>
-    <p class="subtitle">Developer • Artist • 1st Dan Black Belt</p>
+    <h1>Hi, I'm Namia Rahman!</h1>
+    <p class="subtitle"> Tech Enthusiast • Student • Athlete • Artist</p>
     <p>Viqarunnisa Noon School and College | Class of 2024</p>
 </header>
 
 <div class="container">
     
     <section>
-        <h2>The Learning Log</h2>
+        <h2>My Projects</h2>
         <div class="project-row">
             <div class="project-card">
                 <div>
-                    <h3>Bookstore (Python)</h3>
-                    <p>Client-server CRUD system for book data.</p>
-                    <div class="learning-box">
-                        <strong>💡 Learned:</strong> How to handle data persistence and backend logic.
-                    </div>
+                    <h3>Bookstore Management System (Python)</h3>
+                    <p>I used <b>Python API</b> and <b>File I/O</b> to build a client-server CRUD system that manages and persists book data through text files.</p>
                 </div>
-                <a href="https://github.com/namiarahman/BookStore-Management-System-API-Python-" target="_blank">View Code →</a>
+                <a href="https://github.com/namiarahman/BookStore-Management-System-API-Python-" target="_blank">View Code -></a>
             </div>
 
             <div class="project-card">
                 <div>
-                    <h3>Inventory (Java)</h3>
-                    <p>Billing system with a full Swing GUI.</p>
-                    <div class="learning-box">
-                        <strong>💡 Learned:</strong> Mastering event listeners and UI component structure.
-                    </div>
+                    <h3>Bookstore Inventory (Java)</h3>
+                    <<p>I used <b>Java Swing</b> and <b>GUI</b> to develop a visual billing and inventory management interface for retail use.</p>        
                 </div>
-                <a href="https://github.com/namiarahman/BookStore-Management-System-GUI-Java" target="_blank">View Code →</a>
+                <a href="https://github.com/namiarahman/BookStore-Management-System-GUI-Java" target="_blank">View Code -></a>
             </div>
 
             <div class="project-card">
                 <div>
                     <h3>Cryptography (C++)</h3>
-                    <p>Tool to encode/decode messages via a 4-digit key.</p>
-                    <div class="learning-box">
-                        <strong>💡 Learned:</strong> Understanding encryption logic and algorithm security.
-                    </div>
+                   <p>I used <b>Hill Cipher</b> and <b>ASCII manipulation</b> to create an encryption program that secures messages using a 4-digit numeric key.(Only works with uppercase letters)</p>
                 </div>
-                <a href="https://github.com/namiarahman/Cryptography" target="_blank">View Code →</a>
+                <a href="https://github.com/namiarahman/Cryptography" target="_blank">View Code -></a>
             </div>
         </div>
     </section>
 
     <section>
-        <h2>Creative Corner</h2>
+        <h2>My Creative Corner</h2>
         <div class="art-row">
             <div class="art-card">
-                <img src="art1.jpg" alt="Art 1">
-                <p><strong>"The First Sale"</strong><br>Acrylic on canvas. Exploring light and texture.</p>
+                <img src="The Crimson Return.jpg">
+                <p><strong>"The Crimson Return"</strong><br>An abstract meditation on the 'hour of return,' using saturated crimson skies and a still shoreline to capture the communal peace of fishermen finishing their day's labor.</p>
             </div>
             <div class="art-card">
-                <img src="art2.jpg" alt="Art 2">
-                <p><strong>"Abstract Logic"</strong><br>Representing the blend of code and creativity.</p>
+                <img src="Vibrant Nights.jpg">
+                <p><strong>"Vibrant Nights"</strong><br>A vibrant subversion of 'Starry Night' that reimagines the night as a cheerful, lawless space, swapping the moon for a sun to reflect the electric energy of abstract freedom.</p>
             </div>
         </div>
     </section>
+     <section>
+        <div class="art-row">
+            <div class="art-card">
+                <img src="The Golden Vessel.jpg">
+                <p><strong>"The Golden Vessel"</strong><br>A visual meditation on Rabindranath Tagore’s 'Shonar Tori,' using moody teals and indigo waters to capture the moment creation is carried away while the creator is left behind on the rain-swept shore.</p>
+            </div>
+            <div class="art-card">
+                <img src="The Quiet Alchemy.jpg">
+                <p><strong>"The Quiet Alchemy"</strong><br>A nostalgic tribute to childhood blackouts, using indigo swirls and a single golden flicker to capture how a candle flame transformed a dark room into a space of spirit and secret languages.</p>
+            </div>
+        </div>
+    </section>
+     <section>
+        <div class="art-row">
+            <div class="art-card">
+                <img src="The Reach.jpg">
+                <p><strong>"The Reach"</strong><br>A visual meditation on the vertical line. Through a combination of palette knife textures and fluid washes, this piece captures the spirit of the voyager, small in stature, but bold in its ascent toward the light.</p>
+            </div>
+            <div class="art-card">
+                <img src="Rickshawchitro.jpg">
+                <p><strong>"Rickshawchitro"</strong><br>"A celebration of Bangladeshi rickshaw art, using kaleidoscopic motifs of birds and floral patterns to capture the melodramatic beauty and resilient spirit of traditional hand-painted street craft.</p>
+            </div>
+        </div>
+    </section>
+
 
     <footer>
         <p>
